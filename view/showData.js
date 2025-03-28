@@ -6,9 +6,12 @@ async function showData() {
     
     apiData.forEach (a => {
         const pe = document.createElement("p");
+        const img = document.createElement("img")
 
         pe.innerHTML = a.name;
-
+        img.setAttribute("src",a.imageUrl);
+        
+        pe.appendChild(img);
         div.appendChild(pe);
     });
 }
